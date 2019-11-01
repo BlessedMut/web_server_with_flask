@@ -1,0 +1,153 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>faq</title>
+
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<script src="static/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js">
+  <link rel="icon" type="image/png" href="/static/icon.ico">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+ <a class="navbar-brand" href="#">Orion-Tech</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+    <div class="navbar-nav navbar-right">
+      <a class="nav-item nav-link active" href="{{url_for('main')}}">Home</a>
+      <a class="nav-item nav-link" href="{{url_for('about')}}">About Us</a>
+      <a class="nav-item nav-link" href="{{url_for('faq')}}">FAQ <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="{{url_for('inst')}}">Installation</a>
+    </div>
+  </div>
+</nav>
+	<div style="text-align: center;" >
+		<img src="/static/logo1.png" height="150" width="150">
+	</div>
+
+	<h1 align="center">Frequently Asked Questions</h1>
+  <div class="container">
+
+    <div class="card text-center">
+      <div class="card-header">
+        Sun Oct 20 17:22:54
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">Server >>Know-how >>Localhost</h5>
+        <p class="card-text"><div class="wrapper">
+   <a target="_blank" href="your_url_here"><i class="fa fa-3x fa-google-plus"></i></a>
+   <a target="_blank" href="your_url_here"><i class="fa fa-3x fa-facebook-square"></i></a>
+   <a target="_blank" href="your_url_here"><i class="fa fa-3x fa-twitter-square"></i>
+</div></a></p>
+      </div>
+    <div class="card-footer text-muted">
+    How did you like this article
+  </div>
+</div>
+  <br>
+
+    <div class="card">
+
+      <div class="card-body">
+        <h5 class="card-title">Localhost (127.0.0.1)</h5>
+        <p class="card-text">When you (or your computer) call an IP address, you are usually trying to contact another computer on the internet. However, if you call the IP address 127.0.0.1 then you are communicating with the localhost – in principle, with your own computer. But what is the point of starting a virtual conversation with yourself? What do you need the localhost for and how does it work?</p>
+        
+        <ol>
+          <li>What is Localhost?</li>
+          <li>127.0.0.1 - How does loopback work?</li>
+          <li>What is Localhost used for?</li>
+        </ol>
+
+        <h3>What is Localhost?</h3>
+        <p class="card-text">The first point to make when explaining what a localhost is, is that it is always your own computer: when you call the localhost, your computer is talking to itself. However, this is a condensed approach. The localhost is not always directly identified with your computer. In most cases, it has a separate IP address like 192.168.0.1. within your personal network, which is different to the one you use on the internet, and is usually dynamically assigned by the internet service provider. When you are talking about a localhost, you are referring to when a server is used on your own computer.</p>
+
+        <p>Conversely, this means that the term is only used in the context of networks. “Localhost” is not just the name for the virtual server, but also its domain name. Just like .test, .example or .invalid,., .localhost is a top-level domain reserved for documentation and testing purposes. When you try to access the domain, a loopback is triggered. If you acces "http://localhost" in the browser, the request will not be forwarded to the internet through the router, but will instead remain in your own system. Localhost has the IP address 127.0.0.1, which refers back to your own server.</p>
+
+        <div style="text-align: center;">
+          <img class="img-rounded" src="/static/faq.png"><br>
+          <span>Exemplary representation of the communication between a web browser and web server within a local computer</span>  
+        </div>
+<br>
+
+        <h3>127.0.0.1 – how does loopback work?</h3>
+        <p class="card-text">IP addresses are used within a network to communicate with each other. Each participant in the network has their own address. Data packets sent via TCP/IP are able to reach the correct destination when this system is used. The protocol pair <strong>Transmission Control Protocol (TCP)</strong> and <strong>Internet Protocol (IP)</strong> are some of the cornerstones of the internet. However, TCP/IP is also used outside the internet, in local networks. During transmission, the Internet Protocol is responsible for allowing the IP address and <u>subnet mask</u> to address subscribers in a network.</p>
+
+        <p>The allocation of public IP addresses (those that can be reached through the internet) is regulated by an international organization: the Internet Corporation for Assigned Names and Numbers (ICANN). ICANN is also responsible for the allocation of domain names, or the Domain Name System (DNS). However, certain address ranges are <strong>reserved for special purposes</strong>, like the range from 127.0.0.0 to 127.255.255.255. There is no reliable information on why that range was chosen, but you are free to speculate.</p>
+
+        <p>Until the 1990’s, IP addresses on the internet were divided into different classes. The first class <strong>(Class A)</strong> started with 0.0.0.0 (this address is also reserved) and ended with 127.255.255.255. 127 is the last block within the Class A network. This important position could have been the reason why it was chosen.</p>
+
+        <p>A <strong>Localnet</strong> can be set up within this address range. The special thing about this range is not only that it was reserved by ICANN, but is also that IP addresses are not uniquely assigned in it, as is usually the case. But how does it work?</p>
+
+
+        <div class="jumbotron">
+            <h3 style="color: blue;">Fact!!!</h3>
+            <h5>With IPv6, the address ::1 is reserved for loopbacks.</h5>
+        </div>
+        <p>
+          For example, if you enter an IP address (or corresponding domain name) in your browser, the router will forward your request to the internet and to the correct server. This means that if you enter 172.217.0.0, you will reach the Google homepage. However, the situation is different with 127.0.0.1 because requests to this address will not be forwarded to the internet. TCP/IP recognizes from the first block (127) that you don’t want to access the internet, you are calling yourself instead. This then triggers the loopback.
+        </p>
+   
+
+      <div class="jumbotron">
+            <h3 style="color: blue;">Fact!!!</h3>
+            <h5>If you consider the technology independently of the local host, a loopback can be created in an analog way: circuits in communication technology can then be used to determine whether the paths taken by the signal and the reception are correct. </h5>
+        </div>
+        <p>
+          For example, if you enter an IP address (or corresponding domain name) in your browser, the router will forward your request to the internet and to the correct server. This means that if you enter 172.217.0.0, you will reach the Google homepage. However, the situation is different with 127.0.0.1 because requests to this address will not be forwarded to the internet. TCP/IP recognizes from the first block (127) that you don’t want to access the internet, you are calling yourself instead. This then triggers the loopback.
+        </p>
+
+        <h3>What is localhost used for?</h3>
+        <p>
+          Developers use the local host to test programs and web applications. Network administrators can also use the loopback to test network connections. Another practical use for the localhost is the hosts file, where you can use the loopback to block malicious websites.
+        </p>
+
+        <h4>For Testing Purposes</h4>
+        <p>
+          Localhost’s main use in web servers is for programming applications that need to communicate over the internet. During development, it is important to find out whether the application actually works as hoped once it has internet access. Localhosts’ other functions are only possible if the required files can be found on the internet - for example, there is a difference between opening a HTML document on your PC or loading it onto a server and accessing it. Releasing an unfinished product without testing it doesn’t make sense, so developers use a loopback to test them. They can stimulate a connection while also avoiding the network detour: <strong>the connection instead just stays completely inside their own system.</strong>
+
+          <p>
+            Another advantage of using localhost for testing purposes is its speed. When you send a request over the internet, it takes more than 100 milliseconds. If you send a ping to localhost, the maximum transmission time is just one millisecond. With this technology, you can also find out whether or not the Internet Protocol is correctly implemented. To test this yourself, just open the command prompt (Windows) or terminal (Unix/Mac) and use the <strong>ping command</strong>. You can either send it to the domain localhost or directly to the IP address.
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>ping localhost</i>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>ping 127.0.0.1</i>
+
+
+          </p>
+          <p>
+            If you want to set up your own <strong>test server</strong> on your PC to address it through the localhost, you first need to install the right software. It is generally possible to run any standard web server on your own computer, but there is also special software specifically designed for use as a localhost – XAMPP for example. We provide a step by step guide for how to install and configure the test system in our Digital Guide.
+          </p>       
+
+          <h4>To block websites</h4>
+          <p>
+            Localhost also plays a role in the hosts file. In principle, this file is a predecessor of the Domain Name System (DNS): in it IP addresses can be assigned to the corresponding domains. If you enter a website address in the browser, the domain name needs to be translated into an IP address. It used to be the host file, but today you would usually use the global DNS. However, the host file is still present in most operating systems. With Windows, you can find the file under \system32\drivers\etc\hosts; with macOS and other Unix systems, it is found under /etc/hosts.
+            <br>
+            If you yourself have not made any file changes, there are probably these two entries left:
+            <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;127.0.0.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localhost
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;localhost
+          </p>
+          <p>
+            The browser will then try to access the corresponding website on the server with 127.0.0.1. However, it is unlikely that the browser will be able to locate it, because the requested file will not be there. However, if you have set up your own test server, then the browser may find home.html, but this is just your own file. If you have not set up your own test server, an error message will appear instead of the requested website. This technology can also be used to switch off ad inserts throughout the system. To not have to make every entry manually, you can find finished and regularly extended host files on the Internet.
+          </p>
+      </div>
+    </div>
+
+  </div>
+	<br>
+
+	  <footer id="sticky-footer" class="py-4 text-black-50" style="background-color: #e3f2fd;">
+    <div class="container text-center">
+      <small>Copyright &copy; 2019</small>
+    </div>
+  </footer>
+
+</body>
+</html>
